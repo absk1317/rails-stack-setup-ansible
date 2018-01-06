@@ -1,0 +1,44 @@
+---
+# Server Timzone + Locale
+timezone: Asia/Kolkata
+locale: en_US.UTF-8
+
+# Swap
+# Uncommend here and in /roles/common/tasks/main.yml
+swap_enabled: true
+swap_file_path: /swapfile
+swap_file_size_kb: 1024
+
+# General settings
+deploy_dir: /home/ubuntu/projects/
+deploy_user: ubuntu
+deploy_app_name: test
+deploy_server_hostname: staging.prod.url
+
+# Nginx
+nginx_https_enabled: true
+
+# Certbot
+certbot_url: https://dl.eff.org/certbot-auto
+certbot_dir: /opt/certbot
+certbot_email: abhishek.verma@cybrilla.com
+#
+# Ruby
+ruby_install_version: 0.6.1
+chruby_version: 0.3.9
+ruby_version: 2.3.3
+
+# Rails
+rails_secret_key_base: SET_RAILS_SECRET_KEY_BASE_HERE
+puma_workers: 4
+puma_threads: 4,16
+
+# Monit
+monit_sidekiq_enabled: true
+
+# Database
+database_adapter: postgres
+database_name: some_name
+database_user: some_user
+database_password: some_password
+database_host: some_host

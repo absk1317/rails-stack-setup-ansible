@@ -1,0 +1,7 @@
+production:
+  adapter: {{ database_adapter }}
+  encoding: utf8
+  database: {{ database_name }}
+  username: {{ database_user }}
+  password: {{ database_password }}
+  host: {{database_host}}

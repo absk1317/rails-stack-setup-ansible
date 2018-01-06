@@ -1,0 +1,20 @@
+# Install python and aptitude on the target machines (apt-get install python aptitude)
+# Copy ssh public key to machines (ssh-copy-id user@host)
+---
+- name: Install Rails Server
+  hosts: servers
+  #After initial provisioning, use deploy instead of root
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  pre_tasks:
+    - name: apt-get update
+      raw: apt-get update -qq
+  roles:
+    - common
+    - nginx
+    - certbot
+    - ruby
+    - rails
+    - monit
+    - redis
