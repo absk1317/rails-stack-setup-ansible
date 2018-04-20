@@ -8,5 +8,4 @@ ip-here ansible_connection=ssh  ansible_user=ubuntu ansible_python_interpreter=/
 ```
 
 ## TODO:
-  1. Postgres Installation and Configuration.
-  2. Ganglia Integration.
+  1. Ganglia Integration.
