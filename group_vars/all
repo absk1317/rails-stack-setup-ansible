@@ -12,11 +12,14 @@ swap_file_size_kb: 1024
 # General settings
 deploy_dir: /home/ubuntu/projects/
 deploy_user: ubuntu
-deploy_app_name: test
-deploy_server_hostname: staging.prod.url
+deploy_app_name: abcd
+deploy_server_hostname: abcd.com # Needed for ssl certs generation
+
+# Nodejs
+node_version: 9.x
 
 # Nginx
-nginx_https_enabled: true
+nginx_https_enabled: false
 
 # Certbot
 certbot_url: https://dl.eff.org/certbot-auto
@@ -26,10 +29,10 @@ certbot_email: abhishek.verma@cybrilla.com
 # Ruby
 ruby_install_version: 0.6.1
 chruby_version: 0.3.9
-ruby_version: 2.3.3
+ruby_version: ruby-2.5.1
 
 # Rails
-rails_secret_key_base: SET_RAILS_SECRET_KEY_BASE_HERE
+rails_secret_key_base: abcdefghijikl
 puma_workers: 4
 puma_threads: 4,16
 

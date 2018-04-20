@@ -1,0 +1,5 @@
+# Requirements needed by the playbook
+- src: https://github.com/rvm/rvm1-ansible.git
+  name: rvm_io.ruby
+- src: https://github.com/geerlingguy/ansible-role-nodejs.git
+  name: geerlingguy.nodejs

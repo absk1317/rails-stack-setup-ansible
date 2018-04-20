@@ -13,8 +13,18 @@
   roles:
     - common
     - nginx
+    - { role: rvm_io.ruby,
+        tags: ruby,
+        rvm1_rubies: ["{{ ruby_version }}"],
+        rvm1_user: 'ubuntu'
+      }
+    - { role: geerlingguy.nodejs,
+        nodejs_npm_global_packages: [],
+        nodejs_version: "{{ node_version }}"
+      }
     - certbot
-    - ruby
+    # - ruby
+    # - node
     - rails
     - monit
     - redis

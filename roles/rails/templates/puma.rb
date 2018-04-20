@@ -10,6 +10,7 @@ stdout_redirect '{{ deploy_dir  }}{{ deploy_app_name }}/shared/log/puma_access.l
 environment 'production'
 threads {{ puma_threads }}
 workers {{ puma_workers }}
+daemonize true
 
 preload_app!
 prune_bundler
