@@ -19,6 +19,9 @@
         nodejs_npm_global_packages: [],
         nodejs_version: "{{ node_version }}"
       }
+    - { role: geerlingguy.postgresql,
+        postgresql_python_library: python-psycopg2
+      }
     - certbot
     # - ruby
     # - node
